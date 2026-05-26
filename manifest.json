@@ -1,0 +1,14 @@
+{
+  "name": "Pump Sniper",
+  "short_name": "Sniper",
+  "display": "standalone",
+  "background_color": "#131722",
+  "theme_color": "#131722",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

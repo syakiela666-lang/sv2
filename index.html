@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="./manifest.json">
+    <title>Pump Sniper Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-B9zVqjNE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D2wiTHBH.css">
+  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+  <body>
+    <div class="app-container">
+      <main id="single-chart-container">
+        <!-- Single chart will be injected here -->
+      </main>
+
+      <!-- Coin Selector Modal -->
+      <div id="coin-selector-modal" class="modal-overlay">
+        <div class="modal-content">
+          <div class="modal-header">
+            <input type="text" id="coin-search" placeholder="Search symbol..." autocomplete="off" />
+            <button id="toggle-favorites" class="fav-filter-btn" title="Toggle Favorites Only">⭐ Favorites</button>
+          </div>
+          <div class="modal-list-header">
+            <div class="col-symbol">Symbol</div>
+            <div class="col-price">Last Price</div>
+            <div class="col-change" id="sort-change" style="cursor:pointer;" title="Sort by 24h Change">24h Chg ↕</div>
+          </div>
+          <div id="coin-list" class="modal-list">
+            <div class="loading-text">Loading USDT Futures...</div>
+          </div>
+        </div> <!-- Penutup modal-content -->
+      </div> <!-- Penutup modal-overlay -->
+
+      <div id="toast-container" class="toast-container"></div>
+      
+      <!-- Control Panel (Refresh & TF Selector) -->
+      <div class="control-panel">
+        <button class="refresh-button" id="refresh-btn" title="Refresh App (F5)" onclick="location.reload()">🔄</button>
+        <div class="tf-selector">
+          <button class="tf-btn active" data-tf="1m">1m</button>
+          <button class="tf-btn" data-tf="5m">5m</button>
+          <button class="tf-btn" data-tf="15m">15m</button>
+          <button class="tf-btn" data-tf="30m">30m</button>
+          <button class="tf-btn" data-tf="1h">1h</button>
+          <button class="tf-btn" data-tf="4h">4h</button>
+          <button class="tf-btn" data-tf="1d">1D</button>
+        </div>
+      </div>
+      
+      <!-- Quick Favorites Bar -->
+      <div id="favorites-bar" class="favorites-bar"></div>
+      
+      <!-- Font Size Controller (Bottom Left) -->
+      <div class="font-selector-bottom">
+        <button class="font-btn" id="font-minus" title="Kecilkan Teks">A-</button>
+        <button class="font-btn" id="font-plus" title="Besarkan Teks">A+</button>
+      </div>
+
+    </div> <!-- Penutup app-container -->
+  </body>
+</html>
